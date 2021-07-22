@@ -1,0 +1,2 @@
+#Get Commands with TCP in their names.
+Get-Command -Noun *tcp*

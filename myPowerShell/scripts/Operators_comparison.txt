@@ -1,0 +1,50 @@
+#Data
+$a = 10
+$b = 20
+ 
+#Comparisons
+$a -eq $b
+# ans =  False 
+ 
+$a -ne $b
+# ans = True
+ 
+$b -gt $a
+# ans =True
+ 
+$b -ge $a
+# ans = True
+
+$b -lt $a
+# ans = False
+ 
+$b -le $a
+# ans = False
+
+#------------------------------------------
+#Data 
+$a = "mahesh"
+$b = "suresh"
+ 
+$a -like '*ahe*'
+# ans = True
+ 
+$a -notLike '*ahe*'
+# ans = True
+ 
+$b -match '[h$]'
+# ans =  True
+ 
+$b -notMatch '[h$]'
+# ans =  False
+
+#------------------------------------------
+#Data 
+$a = 'abc'
+$b = 'abc'
+ 
+$b -contains $a
+# ans =  True
+ 
+$b -notContains $a
+# ans =  False

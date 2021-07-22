@@ -1,0 +1,3 @@
+# Unblocks files that you download from the web. 
+# Change the folder which is in quotes below. Leave quote in.
+dir -Path "C:\Users\blah" -Recurse | Unblock-File

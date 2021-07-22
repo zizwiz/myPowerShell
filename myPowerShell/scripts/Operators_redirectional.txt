@@ -1,0 +1,12 @@
+$location = Get-Location
+ 
+$location -is 'System.Management.Automation.PathInfo'
+# ans = True
+ 
+$location -isNot 'System.Management.Automation.PathInfo'
+# ans = False
+ 
+$i = 1 
+$i++ 
+$i
+# ans = 2
