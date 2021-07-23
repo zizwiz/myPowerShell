@@ -1,0 +1,25 @@
+# List of Folder commands 
+# Remember to change paths.
+
+# Create folder 
+New-Item -Path 'D:\temp\Test Folder' -ItemType Directory
+
+
+# Copy Folder 
+Copy-Item 'D:\temp\Test Folder' -Destination 'D:\temp\Test Folder1'
+
+
+# Delete Folder 
+Remove-Item 'D:\temp\Test Folder' -Recurse
+
+
+# Move Folder 
+Move-Item D:\temp\Test D:\temp\Test1
+
+
+# Rename Folder 
+Rename-Item D:\temp\Test D:\temp\Test1
+
+
+# Does Folder exist 
+Test-Path D:\temp\test

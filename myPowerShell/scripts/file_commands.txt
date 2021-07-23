@@ -1,0 +1,26 @@
+# List of Folder commands 
+# Remember to change paths.
+
+# Create File 
+New-Item -Path 'D:\temp\Test Folder\Test File.txt' -ItemType File
+
+# Copy Files 
+Copy-Item -Filter *.txt -Path 'D:\temp\Test Folder' -Recurse -Destination 'D:\temp\Test Folder1'
+
+# Delete File 
+Remove-Item 'D:\temp\Test Folder' -Recurse
+
+# Move File 
+Move-Item D:\temp\Test\Test.txt D:\temp\Test1
+
+# Rename File 
+Rename-Item D:\temp\Test\test.txt test1.txt
+
+# Get Contents of file 
+Get-Content D:\temp\Test\test.txt
+
+# Get Size of file 
+(Get-Content D:\temp\test\test.txt).length
+
+# Does File Exist 
+Test-Path D:\temp\test\test.txt
