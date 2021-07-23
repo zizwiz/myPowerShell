@@ -43,6 +43,9 @@ namespace myPowerShell
                 col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
 
+            //when we build we copy scrpit folder to target folder so should exist on startup
+            //but just in case we will create empty folder.
+            Directory.CreateDirectory(@"scripts"); //if it exists it does nothing
         }
 
         private void btn_refresh_Click(object sender, EventArgs e)
@@ -114,16 +117,22 @@ namespace myPowerShell
             // fill the combobox with entries
             cmbobx_scripts.Items.Clear();
 
-
-            DirectoryInfo d = new DirectoryInfo(@"scripts"); //Assuming Test is your Folder
-
-            FileInfo[] Files = d.GetFiles("*.txt"); //Getting Text files
-
-            foreach (FileInfo file in Files)
+            try
             {
-                cmbobx_scripts.Items.Add(Path.GetFileNameWithoutExtension(file.Name));
-            }
 
+                DirectoryInfo d = new DirectoryInfo(@"scripts"); //go to the directory
+
+                FileInfo[] Files = d.GetFiles("*.txt"); //Getting Text files
+
+                foreach (FileInfo file in Files)
+                {
+                    cmbobx_scripts.Items.Add(Path.GetFileNameWithoutExtension(file.Name));
+                }
+            }
+            catch
+            {
+                //do nothing as no folder exists
+            }
             // this is not a file but an entry to allow users to add items, always start on it.
             cmbobx_scripts.Items.Add("User_Defined");
             cmbobx_scripts.SelectedIndex = cmbobx_scripts.Items.IndexOf("User_Defined");

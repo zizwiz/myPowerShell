@@ -111,6 +111,8 @@
     <Content Include="ps.ico" />
     <Content Include="scripts\Config_Create_Alias.txt" />
     <Content Include="scripts\Config_Get_Alias.txt" />
+    <Content Include="scripts\file_commands.txt" />
+    <Content Include="scripts\folder_commands.txt" />
     <Content Include="scripts\Info_Bios.txt" />
     <Content Include="scripts\Info_Clock.txt" />
     <Content Include="scripts\Info_Computer.txt" />
@@ -146,4 +148,7 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)scripts\*.*" "$(TargetDir)\scripts" /Y /I /E</PostBuildEvent>
+  </PropertyGroup>
 </Project>
