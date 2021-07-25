@@ -1,4 +1,6 @@
 # myPowerShell
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+
 A C# .Net Winform app to run Powershell commands through, please see help file in the app for more detailed info on teh app and how it works. 
 
 1.	Introduction 
